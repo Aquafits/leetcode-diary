@@ -34,6 +34,12 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
+import leetcode.utils.TreeNode;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

@@ -6,11 +6,22 @@
         <entry key="$PROJECT_DIR$/src/com/company/leetcode/editor/en/[2]Add Two Numbers.java">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/com/company/leetcode/editor/en/doc/content/[2]Add Two Numbers.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[2]Add Two Numbers.md" />
               <option name="frontendQuestionId" value="leetcode.com2" />
               <option name="host" value="leetcode.com" />
-              <option name="path" value="$PROJECT_DIR$/src/com/company/leetcode/editor/en/[2]Add Two Numbers.java" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[2]Add Two Numbers.java" />
               <option name="titleSlug" value="add-two-numbers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1870]Minimum Speed to Arrive on Time.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[1870]Minimum Speed to Arrive on Time.md" />
+              <option name="frontendQuestionId" value="leetcode.com1870" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[1870]Minimum Speed to Arrive on Time.java" />
+              <option name="titleSlug" value="minimum-speed-to-arrive-on-time" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -25,6 +36,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[200]Number of Islands.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[200]Number of Islands.md" />
+              <option name="frontendQuestionId" value="leetcode.com200" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[200]Number of Islands.java" />
+              <option name="titleSlug" value="number-of-islands" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[2]Add Two Numbers.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[2]Add Two Numbers.md" />
+              <option name="frontendQuestionId" value="leetcode.com2" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[2]Add Two Numbers.java" />
+              <option name="titleSlug" value="add-two-numbers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[380]Insert Delete GetRandom O(1).java">
           <value>
             <LeetcodeEditor>
@@ -36,6 +69,50 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[53]Maximum Subarray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[53]Maximum Subarray.md" />
+              <option name="frontendQuestionId" value="leetcode.com53" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[53]Maximum Subarray.java" />
+              <option name="titleSlug" value="maximum-subarray" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[56]Merge Intervals.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[56]Merge Intervals.md" />
+              <option name="frontendQuestionId" value="leetcode.com56" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[56]Merge Intervals.java" />
+              <option name="titleSlug" value="merge-intervals" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[654]Maximum Binary Tree.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[654]Maximum Binary Tree.md" />
+              <option name="frontendQuestionId" value="leetcode.com654" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[654]Maximum Binary Tree.java" />
+              <option name="titleSlug" value="maximum-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[903]Valid Permutations for DI Sequence.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[903]Valid Permutations for DI Sequence.md" />
+              <option name="frontendQuestionId" value="leetcode.com903" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[903]Valid Permutations for DI Sequence.java" />
+              <option name="titleSlug" value="valid-permutations-for-di-sequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[958]Check Completeness of a Binary Tree.java">
           <value>
             <LeetcodeEditor>
@@ -44,6 +121,28 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[958]Check Completeness of a Binary Tree.java" />
               <option name="titleSlug" value="check-completeness-of-a-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[988]Smallest String Starting From Leaf.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[988]Smallest String Starting From Leaf.md" />
+              <option name="frontendQuestionId" value="leetcode.com988" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[988]Smallest String Starting From Leaf.java" />
+              <option name="titleSlug" value="smallest-string-starting-from-leaf" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[998]Maximum Binary Tree II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[998]Maximum Binary Tree II.md" />
+              <option name="frontendQuestionId" value="leetcode.com998" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[998]Maximum Binary Tree II.java" />
+              <option name="titleSlug" value="maximum-binary-tree-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
