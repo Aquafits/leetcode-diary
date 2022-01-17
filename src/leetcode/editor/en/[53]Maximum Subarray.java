@@ -43,19 +43,15 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int maxSubArray(int[] nums) {
-        int maxSum = nums[0];
-        int previousSum = nums[0];
-
-        for (int i = 1; i < nums.length; i++) {
-            if (previousSum > 0) {
-                maxSum = Math.max(maxSum, previousSum + nums[i]);
-                previousSum = previousSum + nums[i];
-            } else {
-                maxSum = Math.max(maxSum, nums[i]);
-                previousSum = nums[i];
+        int sum = nums[0], max = nums[0];
+        for(int i = 1; i < nums.length; i ++){
+            if(sum < 0){
+                sum = 0;
             }
+            max = Math.max(max, sum + nums[i]);
+            sum += nums[i];
         }
-        return maxSum;
+        return max;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
