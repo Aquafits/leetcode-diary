@@ -60,51 +60,39 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    private int leftBound = -1;
-
     public int compress(char[] cs) {
-        int N = cs.length;
-        int[] counter = new int[N];
-        int j = 0;
-        for (int i = 0; i < N; i++, j++) {
+        // aaabbb
+        // ^  ^
+        // l  j & i
+        int j = 0, l = -1, cnt = 0;
+        for (int i = 0; i < cs.length; i++, j++) {
             cs[j] = cs[i];
             if (j == 0 || cs[j] != cs[j - 1]) {
-                if (j > 0) {
-                    j = writeNumber(cs, counter, j);
+                if (cnt > 1) {
+                    l = writeNumber(cs, l, cnt);
+                    j = l;
+                    cs[j] = cs[i];
+                } else {
+                    l += 1;
                 }
-                counter[j] = 1;
+                cnt = 1;
             } else {
-                counter[j] = counter[j - 1] + 1;
+                cnt++;
             }
         }
-        return writeNumber(cs, counter, j);
-    }
-
-    private int writeNumber(char[] cs, int[] counter, int j) {
-        int cnt = counter[j - 1];
         if (cnt > 1) {
-            int p = j - 1;
-            while (p > leftBound && cs[p] == cs[j - 1]) {
-                p--;
-            }
-            p += 2;
-
-            for (char c : String.valueOf(cnt).toCharArray()) {
-                cs[p++] = c;
-            }
-            if(j < cs.length && p < cs.length){
-                cs[p] = cs[j];
-            }
-            j = p;
+            j = writeNumber(cs, l, cnt);
         }
-//        System.out.println(new String(cs, 0, j));
-        leftBound = j - 1;
         return j;
     }
 
-    public static void main(String[] args){
-        Solution sl = new Solution();
-        sl.compress("eeee4444".toCharArray());
+    private int writeNumber(char[] cs, int l, int cnt) {
+        char[] digits = String.valueOf(cnt).toCharArray();
+        int i = l + 1;
+        for (char c : digits) {
+            cs[i++] = c;
+        }
+        return i;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

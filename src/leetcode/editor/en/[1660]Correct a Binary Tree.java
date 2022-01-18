@@ -58,24 +58,26 @@
 //Binary Tree 👍 146 👎 21
 
 import leetcode.utils.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
 //leetcode submit region begin(Prohibit modification and deletion)
 
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
  * }
  */
 class Solution {
@@ -85,23 +87,26 @@ class Solution {
         q.offer(root);
         Set<Integer> visited = new HashSet<>();
         visited.add(root.val);
-        while (!q.isEmpty()){
+        while (!q.isEmpty()) {
             TreeNode node = q.poll();
-            if(node.right != null){
-                if(node.right.right != null && visited.contains(node.right.right.val)){
+            if (node.right != null) {
+                if (node.right.right != null && visited.contains(node.right.right.val)) {
                     node.right = null;
                     return root;
+                } else {
+                    q.offer(node.right);
+                    visited.add(node.right.val);
                 }
-                q.offer(node.right);
-                visited.add(node.right.val);
             }
-            if(node.left != null){
-                if(node.left.right != null && visited.contains(node.left.right.val)){
+
+            if (node.left != null) {
+                if (node.left.right != null && visited.contains(node.left.right.val)) {
                     node.left = null;
                     return root;
+                } else {
+                    q.offer(node.left);
+                    visited.add(node.left.val);
                 }
-                q.offer(node.left);
-                visited.add(node.left.val);
             }
         }
         return root;

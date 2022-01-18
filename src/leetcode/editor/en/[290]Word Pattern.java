@@ -40,24 +40,21 @@
 
 
 import java.util.HashMap;
-import java.util.Map;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean wordPattern(String pattern, String s) {
         String[] c2str = new String[26];
-        Map<String, Character> str2c = new HashMap<>();
+        HashMap<String, Character> str2c = new HashMap<>();
+
+        char[] cs = pattern.toCharArray();
         String[] strs = s.split(" ");
-        if (strs.length != pattern.length()) return false;
-
-        for (int i = 0; i < strs.length; i++) {
-            char c = pattern.charAt(i);
-            String str = strs[i];
-
-            if (c2str[c-'a'] != null && !c2str[c-'a'].equals(str)) return false;
-            if (str2c.containsKey(str) && !str2c.get(str).equals(c)) return false;
-            c2str[c-'a'] = str;
-            str2c.put(str, c);
+        if (cs.length != strs.length) return false;
+        for (int i = 0; i < cs.length; i++) {
+            if (c2str[cs[i] - 'a'] != null && !c2str[cs[i] - 'a'].equals(strs[i])) return false;
+            if (str2c.containsKey(strs[i]) && !str2c.get(strs[i]).equals(cs[i])) return false;
+            c2str[cs[i] - 'a'] = strs[i];
+            str2c.put(strs[i], cs[i]);
         }
         return true;
     }

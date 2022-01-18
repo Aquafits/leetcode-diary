@@ -52,38 +52,42 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public String minWindow(String s, String t) {
-        int[] sCnt = new int[128], tCnt = new int[128];
+        int[] counter = new int[128], target = new int[128];
         char[] scs = s.toCharArray(), tcs = t.toCharArray();
+        int SN = s.length(), TN = t.length();
         for (char c : tcs) {
-            tCnt[c]++;
+            target[c]++;
         }
 
-        int l = 0, r = 0, SN = scs.length, TN = tcs.length;
-        sCnt[scs[l]]++;
-        String res = "";
+        int l = 0, r = 0;
+        boolean found = false;
+        int[] window = new int[2];
+        counter[scs[0]]++;
         while (r < SN) {
-            while (r - l + 1 >= TN && goodWindow(sCnt, tCnt)) {
-                if (res.equals("") || res.length() > r - l + 1) {
-                    res = s.substring(l, r + 1);
+            while (r - l + 1 >= TN && contains(counter, target)) {
+                if (!found || r - l < window[1] - window[0]) {
+                    window[1] = r;
+                    window[0] = l;
+                    found = true;
                 }
-                sCnt[scs[l]]--;
+                counter[scs[l]]--;
                 l++;
             }
             r++;
-            if (r < SN) sCnt[scs[r]]++;
+            if (r < SN) counter[scs[r]]++;
         }
 
-        return res;
+        return found ? s.substring(window[0], window[1] + 1) : "";
     }
 
-    private boolean goodWindow(int[] sCnt, int[] tCnt) {
-        for (int i = 'A'; i <= 'Z'; i++) {
-            if (sCnt[i] < tCnt[i]) {
+    private boolean contains(int[] counter, int[] target) {
+        for (int i = 'a'; i <= 'z'; i++) {
+            if (target[i] > 0 && counter[i] < target[i]) {
                 return false;
             }
         }
-        for (int i = 'a'; i <= 'z'; i++) {
-            if (sCnt[i] < tCnt[i]) {
+        for (int i = 'A'; i <= 'Z'; i++) {
+            if (target[i] > 0 && counter[i] < target[i]) {
                 return false;
             }
         }

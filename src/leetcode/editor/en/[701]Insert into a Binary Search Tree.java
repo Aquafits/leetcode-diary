@@ -62,18 +62,21 @@ import leetcode.utils.TreeNode;
  */
 class Solution {
     public TreeNode insertIntoBST(TreeNode node, int val) {
-        if (node == null) return new TreeNode(val);
-        if (node.right == null && val > node.val) {
-            node.right = new TreeNode(val);
-        }
-        if (node.left == null && val < node.val) {
-            node.left = new TreeNode(val);
-        }
+        if (node == null) return new TreeNode(val); // this is easy to overlook!
         if (val < node.val) {
-            insertIntoBST(node.left, val);
+            if (node.left == null) {
+                node.left = new TreeNode(val);
+            } else {
+                insertIntoBST(node.left, val);
+            }
         } else if (val > node.val) {
-            insertIntoBST(node.right, val);
+            if (node.right == null) {
+                node.right = new TreeNode(val);
+            } else {
+                insertIntoBST(node.right, val);
+            }
         }
+
         return node;
     }
 }

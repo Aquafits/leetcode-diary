@@ -1,8 +1,6 @@
 package leetcode.editor.en;
 
 import leetcode.utils.ListNode;
-
-import java.util.List;
 //You are given two non-empty linked lists representing two non-negative
 //integers. The digits are stored in reverse order, and each of their nodes contains a 
 //single digit. Add the two numbers and return the sum as a linked list. 
@@ -60,23 +58,23 @@ import java.util.List;
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(-1), p = dummy;
-        int carry = 0;
-        while(l1 != null || l2 != null){
-            int v = carry;
-            if(l1 != null){
+        int c = 0;
+        while (l1 != null || l2 != null) {
+            int v = c;
+            if (l1 != null) {
                 v += l1.val;
                 l1 = l1.next;
             }
-            if(l2 != null){
+            if (l2 != null) {
                 v += l2.val;
                 l2 = l2.next;
             }
-            carry = v / 10;
+            c = v / 10;
             v = v % 10;
             p.next = new ListNode(v);
             p = p.next;
         }
-        if(carry != 0){
+        if (c != 0) {
             p.next = new ListNode(1);
         }
         return dummy.next;

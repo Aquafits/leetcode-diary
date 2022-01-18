@@ -45,22 +45,20 @@
 class UnionFind {
     int[] p;
 
-    public UnionFind(int n) {
+    UnionFind(int n) {
         this.p = new int[n];
-        for (int i = 0; i < n; i++) {
-            p[i] = i;
-        }
+        for (int i = 0; i < n; i++) p[i] = i;
     }
 
-    public int find(int x) {
-        if (x != p[x]) {
+    int find(int x) {
+        if (p[x] != x) {
             p[x] = find(p[x]);
         }
         return p[x];
     }
 
-    public void union(int a, int b) {
-        p[find(a)] = p[find(b)];
+    void union(int x, int y) {
+        p[find(x)] = find(y);
     }
 }
 
@@ -72,7 +70,7 @@ class Solution {
             for (int j = i + 1; j < N; j++) {
                 if (isConnected[i][j] == 1 && uf.find(i) != uf.find(j)) {
                     uf.union(i, j);
-                    n --;
+                    n--;
                 }
             }
         }

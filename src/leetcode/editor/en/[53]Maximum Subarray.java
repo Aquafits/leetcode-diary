@@ -48,8 +48,8 @@ class Solution {
             if(sum < 0){
                 sum = 0;
             }
-            max = Math.max(max, sum + nums[i]);
-            sum += nums[i];
+            sum = sum + nums[i];
+            max = Math.max(max, sum);
         }
         return max;
     }

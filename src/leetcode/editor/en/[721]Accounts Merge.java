@@ -87,41 +87,43 @@ class UnionFind {
 class Solution {
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
         int N = accounts.size();
-        Map<String, Integer> email2Id = new HashMap<>();
         UnionFind uf = new UnionFind(N);
+
+        // union account ids
+        Map<String, Integer> email2id = new HashMap<>();
         for (int i = 0; i < N; i++) {
             List<String> account = accounts.get(i);
             for (int j = 1; j < account.size(); j++) {
                 String email = account.get(j);
-                if (email2Id.containsKey(email)) {
-                    uf.union(i, email2Id.get(email));
+                if (email2id.containsKey(email)) {
+                    uf.union(i, email2id.get(email));
                 } else {
-                    email2Id.put(email, i);
+                    email2id.put(email, i);
                 }
             }
         }
 
-        Map<Integer, Set<String>> id2emails = new HashMap<>();
+        // account id groups to emails
+        Map<Integer, Set<String>> resMap = new HashMap<>();
         for (int i = 0; i < N; i++) {
-            List<String> account = accounts.get(i);
             int cid = uf.find(i);
-            Set<String> set = id2emails.getOrDefault(cid, new HashSet<>());
+            Set<String> emails = resMap.getOrDefault(cid, new HashSet<>());
+            List<String> account = accounts.get(i);
             for (int j = 1; j < account.size(); j++) {
-                set.add(account.get(j));
+                emails.add(account.get(j));
             }
-            id2emails.put(cid, set);
+            resMap.put(cid, emails);
         }
 
+        // build result
         List<List<String>> res = new ArrayList<>();
-        for (Integer cid : id2emails.keySet()) {
-            String name = accounts.get(cid).get(0);
+        for (Integer k : resMap.keySet()) {
             List<String> account = new ArrayList<>();
-
             account.add("");
-            account.addAll(id2emails.get(cid));
+            account.addAll(resMap.get(k));
             Collections.sort(account);
+            account.set(0, accounts.get(k).get(0));
 
-            account.set(0, name);
             res.add(account);
         }
         return res;

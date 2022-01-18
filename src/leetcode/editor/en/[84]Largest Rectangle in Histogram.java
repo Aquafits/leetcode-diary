@@ -33,26 +33,26 @@
 class Solution {
     public int largestRectangleArea(int[] h) {
         int N = h.length;
-        int[] left = new int[N], right = new int[N], stack = new int[N];
-        int idx = 0;
+        int[] left = new int[N], right = new int[N], stk = new int[N];
 
+        int idx = 0;
         for (int i = 0; i < N; i++) {
-            while (idx != 0 && h[stack[idx - 1]] >= h[i]) {
-                idx --;
+            while (idx > 0 && h[stk[idx - 1]] >= h[i]) {
+                idx--;
             }
             if (idx == 0) left[i] = -1;
-            else left[i] = stack[idx - 1];
-            stack[idx ++] = i;
+            else left[i] = stk[idx - 1];
+            stk[idx++] = i;
         }
 
         idx = 0;
         for (int i = N - 1; i >= 0; i--) {
-            while (idx != 0 && h[stack[idx - 1]] >= h[i]) {
-                idx --;
+            while (idx > 0 && h[stk[idx - 1]] >= h[i]) {
+                idx--;
             }
             if (idx == 0) right[i] = N;
-            else right[i] = stack[idx - 1];
-            stack[idx ++] = i;
+            else right[i] = stk[idx - 1];
+            stk[idx++] = i;
         }
 
         int max = 0;
