@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[138]Copy List with Random Pointer.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[138]Copy List with Random Pointer.md" />
+              <option name="frontendQuestionId" value="leetcode.com138" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[138]Copy List with Random Pointer.java" />
+              <option name="titleSlug" value="copy-list-with-random-pointer" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1660]Correct a Binary Tree.java">
           <value>
             <LeetcodeEditor>
@@ -66,6 +77,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[200]Number of Islands.java" />
               <option name="titleSlug" value="number-of-islands" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[290]Word Pattern.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[290]Word Pattern.md" />
+              <option name="frontendQuestionId" value="leetcode.com290" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[290]Word Pattern.java" />
+              <option name="titleSlug" value="word-pattern" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -113,6 +135,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[547]Number of Provinces.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[547]Number of Provinces.md" />
+              <option name="frontendQuestionId" value="leetcode.com547" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[547]Number of Provinces.java" />
+              <option name="titleSlug" value="number-of-provinces" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[56]Merge Intervals.java">
           <value>
             <LeetcodeEditor>
@@ -154,6 +187,61 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[718]Maximum Length of Repeated Subarray.java" />
               <option name="titleSlug" value="maximum-length-of-repeated-subarray" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[721]Accounts Merge.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[721]Accounts Merge.md" />
+              <option name="frontendQuestionId" value="leetcode.com721" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[721]Accounts Merge.java" />
+              <option name="titleSlug" value="accounts-merge" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[767]Reorganize String.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[767]Reorganize String.md" />
+              <option name="frontendQuestionId" value="leetcode.com767" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[767]Reorganize String.java" />
+              <option name="titleSlug" value="reorganize-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[76]Minimum Window Substring.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[76]Minimum Window Substring.md" />
+              <option name="frontendQuestionId" value="leetcode.com76" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[76]Minimum Window Substring.java" />
+              <option name="titleSlug" value="minimum-window-substring" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[84]Largest Rectangle in Histogram.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[84]Largest Rectangle in Histogram.md" />
+              <option name="frontendQuestionId" value="leetcode.com84" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[84]Largest Rectangle in Histogram.java" />
+              <option name="titleSlug" value="largest-rectangle-in-histogram" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[85]Maximal Rectangle.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[85]Maximal Rectangle.md" />
+              <option name="frontendQuestionId" value="leetcode.com85" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[85]Maximal Rectangle.java" />
+              <option name="titleSlug" value="maximal-rectangle" />
             </LeetcodeEditor>
           </value>
         </entry>
