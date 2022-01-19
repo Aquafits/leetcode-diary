@@ -58,28 +58,27 @@ class TreeArray {
         return x & -x;
     }
 
-    int sums(int id) {
-        int res = 0;
-        for (int i = id; i > 0; i -= lowbit(i)) res += tr[i];
-        return res;
+    int sums(int x) {
+        int sum = 0;
+        for (int i = x; i > 0; i -= lowbit(i)) sum += tr[i];
+        return sum;
     }
 
-    void add(int id, int v) {
-        for (int i = id; i <= n; i += lowbit(i)) tr[i] += v;
+    void add(int x, int v) {
+        for (int i = x; i <= n; i += lowbit(i)) tr[i] += v;
     }
 }
 
 class Solution {
     public List<Integer> countSmaller(int[] nums) {
         int N = nums.length;
-        TreeArray tr = new TreeArray(2 * 10_000 + 10);
+        int BIAS = 10_000 + 1;
+        TreeArray tr = new TreeArray(20_0000 + 1);
         List<Integer> res = new ArrayList<>(Collections.nCopies(N, 0));
         for (int i = N - 1; i >= 0; i--) {
-            int x = nums[i] + 10_001;
-            res.set(i, tr.sums(x - 1));
-            tr.add(x, 1);
+            res.set(i, tr.sums(BIAS + nums[i] - 1));
+            tr.add(BIAS + nums[i], 1);
         }
-
         return res;
     }
 }

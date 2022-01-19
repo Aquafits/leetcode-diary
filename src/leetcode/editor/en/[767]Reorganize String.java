@@ -30,38 +30,31 @@ class Solution {
 
         // count every char
         int[] counter = new int[26];
-        for (char c : cs) {
-            counter[c - 'a']++;
-        }
-        int max = counter[0], ptr = 0;
-        for(int i = 0; i < 26; i ++){
-            if(counter[i] > max){
-                max = counter[i];
-                ptr = i;
+        int max = 1, p = cs[0] - 'a';
+        for (int i = 0; i < N; i++) {
+            int cid = cs[i] - 'a';
+            counter[cid]++;
+            if (counter[cid] > max) {
+                max = counter[cid];
+                p = cid;
             }
         }
+        if (max > (N + 1) / 2) return "";
 
-        if(max > (N + 1) / 2){
-            return  "";
-        }
-
-        // fill in as 0, 2, 4 , ..., 1, 3, 5 ...
-        for(int i = 0; i < N; i += 2){
-            if(counter[ptr] == 0){
-                for(int p = 0; p < 26; p ++){
-                    if(counter[p] > 0){
-                        ptr = p;
-                        break;
-                    }
+        // fill in by order 0, 2, 4, ..., 1, 3, 5;
+        for (int i = 0; i < N; i += 2) {
+            if (counter[p] == 0) {
+                p = 0;
+                while (p < 26 && counter[p] == 0) {
+                    p++;
                 }
             }
-            cs[i] = (char) ('a' + ptr);
-            counter[ptr] --;
-            if(i % 2 == 0 && i + 2 >= N){
-                i = -1;
-            }
-        }
 
+            cs[i] = (char) (p + 'a');
+            counter[p]--;
+
+            if (i % 2 == 0 && i + 2 >= N) i = -1; // i + 2 >= N
+        }
         return new String(cs);
     }
 }

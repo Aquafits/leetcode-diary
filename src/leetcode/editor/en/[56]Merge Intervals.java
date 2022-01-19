@@ -30,34 +30,31 @@
 // Related Topics Array Sorting 👍 11516 👎 473
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> {
-            if(a[0]!=b[0]) return a[0]-b[0];
-            else return b[1] - a[1];
+            if (a[0] == b[0]) return b[1] - a[1];
+            else return a[0] - b[0];
         });
 
-        List<int[]> resList = new ArrayList<>();
-        resList.add(intervals[0]);
-        for(int i = 1; i < intervals.length; i++){
-            int[] pre = resList.get(resList.size() - 1);
+        List<int[]> res = new ArrayList<>();
+        int[] pre = intervals[0];
+        for (int i = 1; i < intervals.length; i++) {
             int[] cur = intervals[i];
-            if(pre[1] >= cur[0]){
-                resList.set(resList.size() - 1, new int[]{pre[0], Math.max(pre[1], cur[1])});
+            if (cur[0] <= pre[1]) {
+                pre = new int[]{pre[0], Math.max(pre[1], cur[1])};
             } else {
-                resList.add(cur);
+                res.add(pre);
+                pre = cur;
             }
         }
-
-        int[][] res = new int[resList.size()][2];
-        int i = 0;
-        for(int[] itv: resList){
-            res[i++] = itv;
-        }
-        return res;
+        res.add(pre);
+        return res.toArray(new int[0][0]);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

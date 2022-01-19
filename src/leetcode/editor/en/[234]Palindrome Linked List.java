@@ -43,19 +43,17 @@ import leetcode.utils.ListNode;
  */
 class Solution {
     public boolean isPalindrome(ListNode head) {
-        ListNode dummy = new ListNode(-1);
-        dummy.next = head;
-        ListNode p1 = dummy, p2 = dummy;
+        ListNode dummy = new ListNode(-1, head), p1 = dummy, p2 = dummy;
         while (p2 != null && p2.next != null) {
             p1 = p1.next;
             p2 = p2.next.next;
         }
 
-        reverse(p1);
+        reverseNext(p1);
         p2 = p1.next;
         p1 = dummy.next;
         while (p2 != null) {
-            if (p1.val != p2.val) {
+            if (p2.val != p1.val) {
                 return false;
             }
             p1 = p1.next;
@@ -64,8 +62,7 @@ class Solution {
         return true;
     }
 
-    private void reverse(ListNode dummy) {
-        if (dummy.next == null) return;
+    private void reverseNext(ListNode dummy) {
         ListNode pre = dummy, cur = dummy.next;
         while (cur != null) {
             ListNode next = cur.next;
@@ -77,7 +74,7 @@ class Solution {
             pre = cur;
             cur = next;
         }
-        dummy.next = pre;
+        if (pre != dummy) dummy.next = pre;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

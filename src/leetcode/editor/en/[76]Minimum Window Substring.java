@@ -54,44 +54,35 @@ class Solution {
     public String minWindow(String s, String t) {
         int[] counter = new int[128], target = new int[128];
         char[] scs = s.toCharArray(), tcs = t.toCharArray();
-        int SN = s.length(), TN = t.length();
+        int SN = scs.length, TN = tcs.length;
         for (char c : tcs) {
             target[c]++;
         }
 
         int l = 0, r = 0;
-        boolean found = false;
-        int[] window = new int[2];
-        counter[scs[0]]++;
+        String res = "";
+        counter[scs[l]]++;
         while (r < SN) {
             while (r - l + 1 >= TN && contains(counter, target)) {
-                if (!found || r - l < window[1] - window[0]) {
-                    window[1] = r;
-                    window[0] = l;
-                    found = true;
+                if (res.equals("") || r - l + 1 < res.length()) {
+                    res = s.substring(l, r + 1);
                 }
                 counter[scs[l]]--;
                 l++;
             }
             r++;
-            if (r < SN) counter[scs[r]]++;
+            if (r < SN) counter[scs[r]]++; // ! array out of bound
         }
-
-        return found ? s.substring(window[0], window[1] + 1) : "";
+        return res;
     }
 
     private boolean contains(int[] counter, int[] target) {
-        for (int i = 'a'; i <= 'z'; i++) {
-            if (target[i] > 0 && counter[i] < target[i]) {
-                return false;
-            }
-        }
-        for (int i = 'A'; i <= 'Z'; i++) {
-            if (target[i] > 0 && counter[i] < target[i]) {
-                return false;
-            }
+        for (int i = 'a', j = 'A'; i <= 'z' && j <= 'Z'; i++, j++) {
+            if (target[i] > 0 && counter[i] < target[i]) return false;
+            if (target[j] > 0 && counter[j] < target[j]) return false;
         }
         return true;
     }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)

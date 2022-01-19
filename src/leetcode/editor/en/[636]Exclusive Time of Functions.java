@@ -99,49 +99,34 @@ package leetcode.editor.en;
 import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Log {
-    int id;
-    int time;
-    boolean starting;
-
-    public Log(String s) {
-        String[] split = s.split(":");
-        id = Integer.parseInt(split[0]);
-        starting = split[1].equals("start");
-        int t = Integer.parseInt(split[2]);
-        time = starting ? t : t + 1;
-    }
-}
-
 class Solution {
     public int[] exclusiveTime(int n, List<String> logs) {
         int[] stack = new int[logs.size()], res = new int[n];
         int idx = 0;
 
-        Log prev = null;
-        for (String log : logs) {
-            Log cur = new Log(log);
-
-            if (prev == null) {
-                // must be start
-                assert cur.starting;
-                stack[idx++] = cur.id;
+        int[] pre = parseLog(logs.get(0));
+        stack[idx++] = pre[0];
+        for (int i = 1; i < logs.size(); i++) {
+            int[] cur = parseLog(logs.get(i));
+            if (idx > 0) res[stack[idx - 1]] += cur[2] - pre[2];
+            if (cur[1] == 1) {
+                stack[idx++] = cur[0];
             } else {
-                if (prev.starting) {
-                    res[prev.id] += cur.time - prev.time;
-                } else {
-                    if (idx > 0) res[stack[idx - 1]] += cur.time - prev.time; // stack can be empty
-                }
-
-                if (cur.starting) {
-                    stack[idx++] = cur.id;
-                } else {
-                    idx--;
-                }
+                idx--;
             }
-            prev = cur;
+            pre = cur;
         }
         return res;
+    }
+
+    private int[] parseLog(String s) {
+        int[] log = new int[3];
+        String[] split = s.split(":");
+        log[0] = Integer.parseInt(split[0]); // id
+        log[1] = split[1].equals("start") ? 1 : 0; // 1: start, 0: end
+        int t = Integer.parseInt(split[2]);
+        log[2] = log[1] == 1 ? t : t + 1; // time
+        return log;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
