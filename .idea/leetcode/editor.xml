@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[125]Valid Palindrome.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[125]Valid Palindrome.md" />
+              <option name="frontendQuestionId" value="leetcode.com125" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[125]Valid Palindrome.java" />
+              <option name="titleSlug" value="valid-palindrome" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1344]Angle Between Hands of a Clock.java">
           <value>
             <LeetcodeEditor>
@@ -102,6 +113,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[234]Palindrome Linked List.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[234]Palindrome Linked List.md" />
+              <option name="frontendQuestionId" value="leetcode.com234" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[234]Palindrome Linked List.java" />
+              <option name="titleSlug" value="palindrome-linked-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[290]Word Pattern.java">
           <value>
             <LeetcodeEditor>
@@ -121,6 +143,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[2]Add Two Numbers.java" />
               <option name="titleSlug" value="add-two-numbers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[315]Count of Smaller Numbers After Self.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[315]Count of Smaller Numbers After Self.md" />
+              <option name="frontendQuestionId" value="leetcode.com315" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[315]Count of Smaller Numbers After Self.java" />
+              <option name="titleSlug" value="count-of-smaller-numbers-after-self" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -176,6 +209,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[56]Merge Intervals.java" />
               <option name="titleSlug" value="merge-intervals" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[636]Exclusive Time of Functions.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[636]Exclusive Time of Functions.md" />
+              <option name="frontendQuestionId" value="leetcode.com636" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[636]Exclusive Time of Functions.java" />
+              <option name="titleSlug" value="exclusive-time-of-functions" />
             </LeetcodeEditor>
           </value>
         </entry>
