@@ -47,6 +47,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1269]Number of Ways to Stay in the Same Place After Some Steps.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[1269]Number of Ways to Stay in the Same Place After Some Steps.md" />
+              <option name="frontendQuestionId" value="leetcode.com1269" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[1269]Number of Ways to Stay in the Same Place After Some Steps.java" />
+              <option name="titleSlug" value="number-of-ways-to-stay-in-the-same-place-after-some-steps" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1344]Angle Between Hands of a Clock.java">
           <value>
             <LeetcodeEditor>
@@ -66,6 +77,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[138]Copy List with Random Pointer.java" />
               <option name="titleSlug" value="copy-list-with-random-pointer" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[142]Linked List Cycle II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[142]Linked List Cycle II.md" />
+              <option name="frontendQuestionId" value="leetcode.com142" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[142]Linked List Cycle II.java" />
+              <option name="titleSlug" value="linked-list-cycle-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -124,6 +146,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[287]Find the Duplicate Number.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[287]Find the Duplicate Number.md" />
+              <option name="frontendQuestionId" value="leetcode.com287" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[287]Find the Duplicate Number.java" />
+              <option name="titleSlug" value="find-the-duplicate-number" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[290]Word Pattern.java">
           <value>
             <LeetcodeEditor>
@@ -157,6 +190,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[323]Number of Connected Components in an Undirected Graph.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[323]Number of Connected Components in an Undirected Graph.md" />
+              <option name="frontendQuestionId" value="leetcode.com323" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[323]Number of Connected Components in an Undirected Graph.java" />
+              <option name="titleSlug" value="number-of-connected-components-in-an-undirected-graph" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[340]Longest Substring with At Most K Distinct Characters.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[340]Longest Substring with At Most K Distinct Characters.md" />
+              <option name="frontendQuestionId" value="leetcode.com340" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[340]Longest Substring with At Most K Distinct Characters.java" />
+              <option name="titleSlug" value="longest-substring-with-at-most-k-distinct-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[380]Insert Delete GetRandom O(1).java">
           <value>
             <LeetcodeEditor>
@@ -176,6 +231,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[443]String Compression.java" />
               <option name="titleSlug" value="string-compression" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[503]Next Greater Element II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[503]Next Greater Element II.md" />
+              <option name="frontendQuestionId" value="leetcode.com503" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[503]Next Greater Element II.java" />
+              <option name="titleSlug" value="next-greater-element-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -308,6 +374,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[85]Maximal Rectangle.java" />
               <option name="titleSlug" value="maximal-rectangle" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[895]Maximum Frequency Stack.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[895]Maximum Frequency Stack.md" />
+              <option name="frontendQuestionId" value="leetcode.com895" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[895]Maximum Frequency Stack.java" />
+              <option name="titleSlug" value="maximum-frequency-stack" />
             </LeetcodeEditor>
           </value>
         </entry>
