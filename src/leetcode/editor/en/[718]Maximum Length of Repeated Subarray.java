@@ -31,29 +31,20 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int findLength(int[] nums1, int[] nums2) {
-        // two intervals overlaps [0, i + (n1 - 1)]
-        //     1 2 3 2 1
-        //             3 2 1 4 7
-        //     ^       ^       ^
-        // i = -(n1-1) 0    (n2-1)
         int N1 = nums1.length, N2 = nums2.length;
-        int res = 0;
-        for (int i = -(N1 - 1); i <= N2 - 1; i++) { // O(N1 + N2)
-            int cnt = 0;
-            // overlapping range
-            for (int j = Math.max(0, i); j <= Math.min(i + (N1 - 1), N2 - 1); j++) { // O(N2)
-                if (nums1[j - i] == nums2[j]) {
+        int max = 0;
+        for (int bias = -N1 + 1; bias <= N2 - 1; bias++) {
+            int l = Math.max(bias, 0), r = Math.min(bias + N1 - 1, N2 - 1), cnt = 0;
+            for (int i = l; i <= r; i++) {
+                if (nums1[i - bias] == nums2[i]) {
                     cnt++;
+                    max = Math.max(max, cnt);
                 } else {
                     cnt = 0;
                 }
-                res = Math.max(res, cnt);
             }
         }
-
-        // Time Complexity: O(N2(N1 + N2))
-        // Space Complexity: O(1)
-        return res;
+        return max;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

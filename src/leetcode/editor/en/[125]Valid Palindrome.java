@@ -46,36 +46,36 @@
 class Solution {
     public boolean isPalindrome(String s) {
         char[] cs = s.toCharArray();
-        int l = 0, r = cs.length - 1;
-
+        int N = cs.length;
+        int l = 0, r = N - 1;
         while (l < r) {
-            if (!valid(cs, l)) {
+            if (!valid(cs[l])) {
                 l++;
                 continue;
             }
-            if (!valid(cs, r)) {
+
+            if (!valid(cs[r])) {
                 r--;
                 continue;
             }
-            if (!same(cs, l, r)) {
+            if (!same(cs[l], cs[r])) {
                 return false;
+            } else {
+                l++;
+                r--;
             }
-            l ++;
-            r --;
         }
         return true;
     }
 
-    private boolean same(char[] cs, int l, int r) {
-        if (cs[l] >= '0' && cs[l] <= '9') {
-            return cs[l] == cs[r];
-        } else {
-            return Character.toLowerCase(cs[l]) == Character.toLowerCase(cs[r]);
-        }
+    private boolean valid(char c) {
+        return Character.isDigit(c) || Character.isAlphabetic(c);
     }
 
-    private boolean valid(char[] cs, int i) {
-        return (cs[i] >= '0' && cs[i] <= '9') || (cs[i] >= 'a' && cs[i] <= 'z') || (cs[i] >= 'A' && cs[i] <= 'Z');
+    private boolean same(char c1, char c2) {
+        if (Character.isAlphabetic(c1)) c1 = Character.toLowerCase(c1);
+        if (Character.isAlphabetic(c2)) c2 = Character.toLowerCase(c2);
+        return c1 == c2;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

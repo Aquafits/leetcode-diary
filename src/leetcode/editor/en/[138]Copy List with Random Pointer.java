@@ -80,32 +80,31 @@ class Solution {
     public Node copyRandomList(Node head) {
         if (head == null) return null;
 
-        // insert copy
+        // insert a copy next to the node itself
         Node p = head;
         while (p != null) {
-            Node copy = new Node(p.val);
-            copy.next = p.next;
-            p.next = copy;
-            p = copy.next;
+            Node next = p.next;
+            p.next = new Node(p.val);
+            p.next.next = next;
+            p = next;
         }
 
-        // fill copy.random
-        p = head;
-        while (p != null) {
-            if (p.random != null) {
-                p.next.random = p.random.next;
-            }
-            p = p.next.next;
-        }
-
-        // fill copy.next, remove copy
-        Node res = head.next;
+        // fill in random
         p = head;
         while (p != null) {
             Node next = p.next.next;
-            if (next != null) {
-                p.next.next = next.next;
+            if (p.random != null) {
+                p.next.random = p.random.next;
             }
+            p = next;
+        }
+
+        // fill in next, separate two linked list
+        p = head;
+        Node res = head.next;
+        while (p != null) {
+            Node next = p.next.next;
+            p.next.next = next == null ? null : next.next;
             p.next = next;
             p = next;
         }

@@ -93,20 +93,17 @@ class Solution {
                 if (node.right.right != null && visited.contains(node.right.right.val)) {
                     node.right = null;
                     return root;
-                } else {
-                    q.offer(node.right);
-                    visited.add(node.right.val);
                 }
+                visited.add(node.right.val);
+                q.offer(node.right);
             }
-
             if (node.left != null) {
                 if (node.left.right != null && visited.contains(node.left.right.val)) {
                     node.left = null;
                     return root;
-                } else {
-                    q.offer(node.left);
-                    visited.add(node.left.val);
                 }
+                visited.add(node.left.val);
+                q.offer(node.left);
             }
         }
         return root;

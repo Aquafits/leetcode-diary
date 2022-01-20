@@ -44,18 +44,15 @@ class Solution {
         Arrays.fill(res, -1);
 
         int[] stack = new int[2 * N];
-        int idx = 0;
+        int size = 0;
         for (int i = 0; i < 2 * N; i++) {
-            int nid = i % N;
-            while (idx > 0 && nums[stack[idx - 1]] < nums[nid]) {
-//                System.out.printf("top: nums[%d] = %d < cur: nums[%d] = %d, pop top%n", stack[idx - 1], nums[stack[idx - 1]], nid, nums[nid]);
-                res[stack[idx - 1]] = nums[nid];
-                idx--;
+            int id = i % N;
+            while (size > 0 && nums[stack[size - 1]] < nums[id]) {
+                res[stack[size - 1]] = nums[id];
+                size--;
             }
-//            System.out.printf("push nid = %d%n", nid);
-            stack[idx++] = nid;
+            stack[size++] = id;
         }
-
         return res;
     }
 
