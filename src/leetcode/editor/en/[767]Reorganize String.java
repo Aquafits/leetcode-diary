@@ -27,10 +27,8 @@ class Solution {
     public String reorganizeString(String s) {
         int N = s.length();
         char[] cs = s.toCharArray();
-
-        // count every char
-        int[] counter = new int[26];
-        int max = 1, p = cs[0] - 'a';
+        int counter[] = new int[26];
+        int max = 0, p = 0;
         for (int i = 0; i < N; i++) {
             int cid = cs[i] - 'a';
             counter[cid]++;
@@ -39,21 +37,18 @@ class Solution {
                 p = cid;
             }
         }
-        if (max > (N + 1) / 2) return "";
+        if (max > (N + 1) / 2) {
+            return "";
+        }
 
-        // fill in by order 0, 2, 4, ..., 1, 3, 5;
         for (int i = 0; i < N; i += 2) {
             if (counter[p] == 0) {
                 p = 0;
-                while (p < 26 && counter[p] == 0) {
-                    p++;
-                }
+                while (p < 26 && counter[p] == 0) p++;
             }
-
             cs[i] = (char) (p + 'a');
             counter[p]--;
-
-            if (i % 2 == 0 && i + 2 >= N) i = -1; // i + 2 >= N
+            if (i % 2 == 0 && i + 2 >= N) i = -1;
         }
         return new String(cs);
     }

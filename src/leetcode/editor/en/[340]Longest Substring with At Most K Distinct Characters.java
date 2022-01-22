@@ -31,31 +31,30 @@
 class Solution {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
         char[] cs = s.toCharArray();
-        int l = 0, r = 0;
+        int N = cs.length;
         int[] counter = new int[128];
         counter[cs[0]]++;
 
-
-        int len = 0;
-        while (l < cs.length && r < cs.length) {
-            while (size(counter) <= k && r < cs.length) {
-                len = Math.max(len, r - l + 1);
+        int l = 0, r = 0;
+        int max = 0;
+        while (l < N && r < N) {
+            while (r < N && sizeOf(counter) <= k) {
+                max = Math.max(max, r - l + 1);
                 r++;
-                if (r < cs.length) counter[cs[r]]++;
+                if (r < N) counter[cs[r]]++;
             }
-
-            counter[cs[l]]--;
+            if (l < N) counter[cs[l]]--;
             l++;
         }
-        return len;
+        return max;
     }
 
-    private int size(int[] counter) {
-        int n = 0;
+    private int sizeOf(int[] counter) {
+        int res = 0;
         for (int i = 0; i < 128; i++) {
-            if (counter[i] > 0) n++;
+            if (counter[i] > 0) res++;
         }
-        return n;
+        return res;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

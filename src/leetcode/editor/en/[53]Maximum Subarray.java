@@ -43,13 +43,13 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int maxSubArray(int[] nums) {
-        int sum = nums[0], max = nums[0];
+        int preSum = nums[0], max = nums[0];
         for(int i = 1; i < nums.length; i ++){
-            if(sum < 0){
-                sum = 0;
+            if(preSum < 0){
+                preSum = 0;
             }
-            sum = sum + nums[i];
-            max = Math.max(max, sum);
+            preSum = preSum + nums[i];
+            max = Math.max(max, preSum);
         }
         return max;
     }

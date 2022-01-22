@@ -66,27 +66,22 @@ class Solution {
             jobs[i][2] = profit[i];
         }
         Arrays.sort(jobs, Comparator.comparingInt(j -> j[0]));
-        // dp[i] = dp[find(job[i][1])] + profit[i], dp[i+1]
 
+        // dp[i] = max(dp[i+1], profit[i] + dp[find(jobs[i][1])]);
         int[] dp = new int[N + 1];
-        for (int i = N - 1; i >= 0; i--) {
-            int skip = dp[i + 1];
-            int take = jobs[i][2]; // if you take, then you will get base profit;
-            int nextId = find(jobs, jobs[i][1]);
-            if (nextId > 0) take += dp[nextId];
-            dp[i] = Math.max(skip, take);
+        for (int i = N - 1; i >= 0; i-- ) {
+            int j = find(jobs, jobs[i][1]); // find a job whose start time >= the end time of this job
+            dp[i] = Math.max(dp[i + 1], jobs[i][2] + (j > 0 ? dp[j] : 0));
         }
-
         return dp[0];
     }
 
-    int find(int[][] jobs, int time) {
-        // find the first job has a start time >= time
-        //[)[]
+    private int find(int[][] jobs, int time) {
         int l = 0, r = jobs.length - 1;
         while (l < r) {
             int mid = (l + r) >> 1;
-            if (jobs[mid][0] >= time) {
+            // [)[], left no, right yes
+            if(jobs[mid][0] >= time){
                 r = mid;
             } else {
                 l = mid + 1;

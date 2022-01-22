@@ -43,23 +43,19 @@
 // Related Topics Array Two Pointers Sorting 👍 571 👎 25
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public List<Integer> minAvailableDuration(int[][] slots1, int[][] slots2, int duration) {
-        return solve1(slots1, slots2, duration);
-//        return solve2(slots1, slots2, duration);
+//        return solve1(slots1, slots2, duration);
+        return solve2(slots1, slots2, duration);
     }
 
     private List<Integer> solve1(int[][] slots1, int[][] slots2, int duration) {
         // double ptr
         slots1 = Arrays.stream(slots1).filter(s -> s[1] - s[0] >= duration).sorted(Comparator.comparingInt(s -> s[0])).toArray(int[][]::new);
         slots2 = Arrays.stream(slots2).filter(s -> s[1] - s[0] >= duration).sorted(Comparator.comparingInt(s -> s[0])).toArray(int[][]::new);
-
         int i = 0, j = 0;
         while (i < slots1.length && j < slots2.length) {
             int l = Math.max(slots1[i][0], slots2[j][0]), r = Math.min(slots1[i][1], slots2[j][1]);
@@ -74,7 +70,20 @@ class Solution {
     }
 
     private List<Integer> solve2(int[][] slots1, int[][] slots2, int duration) {
-        return null;
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(s -> s[0]));
+        for (int[] s : slots1) if (s[1] - s[0] >= duration) pq.offer(s);
+        for (int[] s : slots2) if (s[1] - s[0] >= duration) pq.offer(s);
+
+        int[] pre = pq.poll();
+        while (!pq.isEmpty()) {
+            int[] cur = pq.poll();
+            int r = Math.min(pre[1], cur[1]);
+            if (r - cur[0] >= duration) {
+                return Arrays.asList(cur[0], cur[0] + duration);
+            }
+            pre = cur;
+        }
+        return new ArrayList<>();
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

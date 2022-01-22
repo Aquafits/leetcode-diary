@@ -57,15 +57,17 @@ class Solution {
         for (int i = 0; i < arr.length; i++) {
             int cur = arr[i];
             while (sz > 0 && stack[sz - 1] < cur) {
-                int min = stack[sz - 1];
+                int pop = stack[sz - 1];
                 sz--;
-                res += min * Math.min(stack[sz - 1], cur);
+                res += pop * Math.min(stack[sz - 1], cur);
             }
             stack[sz++] = cur;
         }
+
         while (sz > 2) {
-            res += stack[sz - 1] * stack[sz - 2];
+            int pop = stack[sz - 1];
             sz--;
+            res += pop * stack[sz - 1];
         }
         return res;
     }

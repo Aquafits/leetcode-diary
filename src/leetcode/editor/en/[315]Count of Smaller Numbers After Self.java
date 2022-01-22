@@ -1,4 +1,5 @@
-package leetcode.editor.en;//You are given an integer array nums and you have to return a new counts array.
+package leetcode.editor.en;
+//You are given an integer array nums and you have to return a new counts array.
 // The counts array has the property where counts[i] is the number of smaller 
 //elements to the right of nums[i]. 
 //
@@ -51,20 +52,20 @@ class TreeArray {
 
     TreeArray(int n) {
         this.n = n;
-        this.tr = new int[n];
+        tr = new int[n];
     }
 
-    int lowbit(int x) {
+    private int lowbit(int x) {
         return x & -x;
     }
 
-    int sums(int x) {
+    public int sums(int x) {
         int sum = 0;
         for (int i = x; i > 0; i -= lowbit(i)) sum += tr[i];
         return sum;
     }
 
-    void add(int x, int v) {
+    public void add(int x, int v) {
         for (int i = x; i <= n; i += lowbit(i)) tr[i] += v;
     }
 }
@@ -72,12 +73,12 @@ class TreeArray {
 class Solution {
     public List<Integer> countSmaller(int[] nums) {
         int N = nums.length;
-        int BIAS = 10_000 + 1;
-        TreeArray tr = new TreeArray(20_0000 + 1);
+        int bias = 10001;
+        TreeArray tr = new TreeArray(20000 + 10);
         List<Integer> res = new ArrayList<>(Collections.nCopies(N, 0));
         for (int i = N - 1; i >= 0; i--) {
-            res.set(i, tr.sums(BIAS + nums[i] - 1));
-            tr.add(BIAS + nums[i], 1);
+            res.set(i, tr.sums(nums[i] + bias - 1));
+            tr.add(nums[i] + bias, 1);
         }
         return res;
     }

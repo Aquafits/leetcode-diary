@@ -46,13 +46,15 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int findDuplicate(int[] nums) {
+        // pos 0 has out-degree but does not have in-degree, there is loop in [1, n]
+        // the loop entrance got 2 in-degrees, we need to find it
         int p1 = 0, p2 = 0;
-        while (p1 != p2 || p1 == 0){
+        while (p1 != p2 || p1 == 0) {
             p1 = nums[p1];
             p2 = nums[nums[p2]];
         }
         p1 = 0;
-        while (p1 != p2){
+        while (p1 != p2) {
             p1 = nums[p1];
             p2 = nums[p2];
         }

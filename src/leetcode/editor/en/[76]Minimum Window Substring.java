@@ -55,25 +55,21 @@ class Solution {
         int[] counter = new int[128], target = new int[128];
         char[] scs = s.toCharArray(), tcs = t.toCharArray();
         int SN = scs.length, TN = tcs.length;
-        for (char c : tcs) {
-            target[c]++;
-        }
+        for (char c : tcs) target[c]++;
 
         int l = 0, r = 0;
-        String res = "";
-        counter[scs[l]]++;
-        while (r < SN) {
+        counter[scs[0]]++;
+        int[] slot = null;
+        while (l < SN && r < SN) {
             while (r - l + 1 >= TN && contains(counter, target)) {
-                if (res.equals("") || r - l + 1 < res.length()) {
-                    res = s.substring(l, r + 1);
-                }
-                counter[scs[l]]--;
+                if (slot == null || r - l < slot[1] - slot[0]) slot = new int[]{l, r};
+                if (l < SN) counter[scs[l]]--;
                 l++;
             }
             r++;
-            if (r < SN) counter[scs[r]]++; // ! array out of bound
+            if (r < SN) counter[scs[r]]++;
         }
-        return res;
+        return slot == null ? "" : s.substring(slot[0], slot[1] + 1);
     }
 
     private boolean contains(int[] counter, int[] target) {
@@ -83,6 +79,7 @@ class Solution {
         }
         return true;
     }
+
 
 }
 //leetcode submit region end(Prohibit modification and deletion)

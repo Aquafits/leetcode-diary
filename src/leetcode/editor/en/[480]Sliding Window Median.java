@@ -56,40 +56,42 @@ import java.util.PriorityQueue;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public double[] medianSlidingWindow(int[] nums, int k) {
-        PriorityQueue<Integer> left = new PriorityQueue<>(k, Collections.reverseOrder()), right = new PriorityQueue<>(k);
         int N = nums.length;
-        double[] res = new double[N - k + 1];
-        for (int i = 0; i <= nums.length - k; i++) {
+        PriorityQueue<Integer> left = new PriorityQueue<>(k, Collections.reverseOrder());
+        PriorityQueue<Integer> right = new PriorityQueue<>(k);
+        double[] medians = new double[N - k + 1];
+
+        for (int i = 0; i <= N - k; i++) {
             if (i == 0) {
                 for (int j = 0; j < k; j++) right.offer(nums[j]);
                 for (int j = 0; j < k / 2; j++) left.offer(right.poll());
             } else {
-                // update left and right
                 int toRm = nums[i - 1], toAdd = nums[i + k - 1];
                 remove(left, right, toRm);
                 add(left, right, toAdd, k);
             }
-            res[i] = getMed(left, right, k);
+            medians[i] = getMedian(left, right, k);
         }
-        return res;
+        return medians;
     }
 
-    private void add(PriorityQueue<Integer> left, PriorityQueue<Integer> right, int toAdd, int k) {
-        if (!right.isEmpty() && right.peek() <= toAdd) right.offer(toAdd);
-        else left.offer(toAdd);
-
-        while (left.size() < k / 2) left.offer(right.poll());
-        while (left.size() > k / 2) right.offer(left.poll());
-    }
-
-    private void remove(PriorityQueue<Integer> left, PriorityQueue<Integer> right, int toRm) {
-        if (right.peek() <= toRm) right.remove(toRm);
-        else left.remove(toRm);
-    }
-
-    private double getMed(PriorityQueue<Integer> left, PriorityQueue<Integer> right, int k) {
+    private double getMedian(PriorityQueue<Integer> left, PriorityQueue<Integer> right, int k) {
         if (k % 2 == 0) return left.peek() / 2.0 + right.peek() / 2.0;
         else return right.peek();
     }
+
+    private void add(PriorityQueue<Integer> left, PriorityQueue<Integer> right, int toAdd, int k) {
+        if (!right.isEmpty() && toAdd >= right.peek()) right.add(toAdd); // right is empty is not to say left is empty
+        else left.add(toAdd);
+
+        while (left.size() > k / 2) right.offer(left.poll());
+        while (left.size() < k / 2) left.offer(right.poll());
+    }
+
+    private void remove(PriorityQueue<Integer> left, PriorityQueue<Integer> right, int toRm) {
+        if (toRm >= right.peek()) right.remove(toRm);
+        else left.remove(toRm);
+    }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)

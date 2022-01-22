@@ -48,33 +48,27 @@ class Solution {
             p1 = p1.next;
             p2 = p2.next.next;
         }
-
         reverseNext(p1);
         p2 = p1.next;
         p1 = dummy.next;
         while (p2 != null) {
-            if (p2.val != p1.val) {
-                return false;
-            }
-            p1 = p1.next;
+            if (p1.val != p2.val) return false;
             p2 = p2.next;
+            p1 = p1.next;
         }
         return true;
     }
 
     private void reverseNext(ListNode dummy) {
+        if (dummy.next == null) return;
         ListNode pre = dummy, cur = dummy.next;
         while (cur != null) {
             ListNode next = cur.next;
-            if (pre == dummy) {
-                cur.next = null;
-            } else {
-                cur.next = pre;
-            }
+            cur.next = pre == dummy ? null : pre;
             pre = cur;
             cur = next;
         }
-        if (pre != dummy) dummy.next = pre;
+        dummy.next = pre;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

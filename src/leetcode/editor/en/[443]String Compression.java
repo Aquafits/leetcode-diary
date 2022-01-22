@@ -61,33 +61,30 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int compress(char[] cs) {
-        // aaabbb
-        // ^  ^
-        // l  j & i
-        int l = -1, j = 0, cnt = 0;
-        for (int i = 0; i < cs.length; i++, j++) {
+        int N = cs.length;
+        int j = 0, l = -1, cnt = 0;
+        for (int i = 0; i < N; i++, j++) {
             cs[j] = cs[i];
             if (j == 0 || cs[j] != cs[j - 1]) {
-                // write number and update left bound
-                j = l = compress(cs, cnt, l);
+                j = l = compress(cs, l, cnt);
                 cs[j] = cs[i];
                 cnt = 1;
             } else {
                 cnt++;
             }
         }
-        j = compress(cs, cnt, l);
+        j = compress(cs, l, cnt);
         return j;
     }
 
-    private int compress(char[] cs, int cnt, int l) {
+    private int compress(char[] cs, int l, int cnt) {
         if (cnt <= 1) return l + 1;
         char[] digits = String.valueOf(cnt).toCharArray();
-        int i = l + 1;
+        l++;
         for (char c : digits) {
-            cs[i++] = c;
+            cs[l++] = c;
         }
-        return i;
+        return l;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

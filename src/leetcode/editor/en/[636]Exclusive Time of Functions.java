@@ -101,19 +101,17 @@ import java.util.List;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[] exclusiveTime(int n, List<String> logs) {
-        int[] stack = new int[logs.size()], res = new int[n];
-        int idx = 0;
+        int logCnt = logs.size();
+        int[] res = new int[n], stack = new int[logCnt];
+        int sz = 0;
 
         int[] pre = parseLog(logs.get(0));
-        stack[idx++] = pre[0];
-        for (int i = 1; i < logs.size(); i++) {
+        stack[sz++] = pre[0];
+        for (int i = 1; i < logCnt; i++) {
             int[] cur = parseLog(logs.get(i));
-            if (idx > 0) res[stack[idx - 1]] += cur[2] - pre[2];
-            if (cur[1] == 1) {
-                stack[idx++] = cur[0];
-            } else {
-                idx--;
-            }
+            if (sz > 0) res[stack[sz - 1]] += cur[2] - pre[2];
+            if (cur[1] == 1) stack[sz++] = cur[0];
+            else sz--;
             pre = cur;
         }
         return res;
