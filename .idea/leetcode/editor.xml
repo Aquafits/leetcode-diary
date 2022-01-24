@@ -190,6 +190,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[274]H-Index.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[274]H-Index.md" />
+              <option name="frontendQuestionId" value="leetcode.com274" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[274]H-Index.java" />
+              <option name="titleSlug" value="h-index" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[287]Find the Duplicate Number.java">
           <value>
             <LeetcodeEditor>
@@ -407,6 +418,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[76]Minimum Window Substring.java" />
               <option name="titleSlug" value="minimum-window-substring" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[791]Custom Sort String.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[791]Custom Sort String.md" />
+              <option name="frontendQuestionId" value="leetcode.com791" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[791]Custom Sort String.java" />
+              <option name="titleSlug" value="custom-sort-string" />
             </LeetcodeEditor>
           </value>
         </entry>
