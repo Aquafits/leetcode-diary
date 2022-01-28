@@ -67,7 +67,7 @@ import leetcode.utils.ListNode;
 public class Solution {
     public ListNode detectCycle(ListNode head) {
         ListNode dummy = new ListNode(-1, head), p1 = dummy, p2 = dummy;
-        while (p1 == dummy || p1 != p2) {
+        while (p1 != p2 || p1 == dummy) {
             if (p2 == null || p2.next == null) return null;
             p1 = p1.next;
             p2 = p2.next.next;

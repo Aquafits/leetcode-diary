@@ -48,37 +48,37 @@ import java.util.List;
 //leetcode submit region begin(Prohibit modification and deletion)
 class TreeArray {
     int[] tr;
-    int n;
+    int size;
 
-    TreeArray(int n) {
-        this.n = n;
-        tr = new int[n];
+    TreeArray(int size) {
+        this.size = size;
+        this.tr = new int[size];
     }
 
-    private int lowbit(int x) {
+    int lowbit(int x) {
         return x & -x;
     }
 
-    public int sums(int x) {
+    int sums(int x) {
         int sum = 0;
         for (int i = x; i > 0; i -= lowbit(i)) sum += tr[i];
         return sum;
     }
 
-    public void add(int x, int v) {
-        for (int i = x; i <= n; i += lowbit(i)) tr[i] += v;
+    void add(int x, int v) {
+        for (int i = x; i <= size; i += lowbit(i)) tr[i] += v;
     }
 }
 
 class Solution {
     public List<Integer> countSmaller(int[] nums) {
         int N = nums.length;
-        int bias = 10001;
-        TreeArray tr = new TreeArray(20000 + 10);
+        TreeArray tr = new TreeArray(20_000 + 10);
         List<Integer> res = new ArrayList<>(Collections.nCopies(N, 0));
         for (int i = N - 1; i >= 0; i--) {
-            res.set(i, tr.sums(nums[i] + bias - 1));
-            tr.add(nums[i] + bias, 1);
+            int x = nums[i] + 10_000 + 1;
+            res.set(i, tr.sums(x - 1));
+            tr.add(x, 1);
         }
         return res;
     }

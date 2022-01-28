@@ -59,15 +59,15 @@ class Solution {
             counter[cs[i] - 'a']++;
         }
 
+        Set<Integer> freqSet = new HashSet<>();
         int delCnt = 0;
-        Set<Integer> set = new HashSet<>();
         for (int i = 0; i < 26; i++) {
-            while (counter[i] > 0 && !set.add(counter[i])) {
+            while (counter[i] > 0 && freqSet.contains(counter[i])) {
                 counter[i]--;
                 delCnt++;
             }
+            freqSet.add(counter[i]);
         }
-
         return delCnt;
     }
 }

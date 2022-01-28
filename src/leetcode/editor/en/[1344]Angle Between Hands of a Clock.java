@@ -38,15 +38,11 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public double angleClock(int hour, int minutes) {
-        double p = (minutes + 0.0) / 60.0;
-        double a1 = hour * 30 + 30 * p;
-        double a2 = minutes * 6.0;
-
-        double res = Math.abs(a2 - a1);
-        if(res > 180.0){
-            res = 360.0 - res;
-        }
-        return res;
+        double a1 = minutes * 6.0;
+        double a2 = (hour + minutes / 60.0) * 30.0;
+        double a = Math.abs(a1 - a2);
+        if (a > 180) a = 360 - a;
+        return a;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -45,10 +45,10 @@ class Solution {
         int[][] h = new int[M][N];
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
-                if (matrix[i][j] == '0') {
-                    h[i][j] = 0;
-                } else {
+                if (matrix[i][j] == '1') {
                     h[i][j] = 1 + (i > 0 ? h[i - 1][j] : 0);
+                } else {
+                    h[i][j] = 0;
                 }
             }
         }
@@ -62,13 +62,11 @@ class Solution {
 
     private int maximalRectangleInHistogram(int[] h) {
         int N = h.length;
-        int[] stack = new int[N], left = new int[N], right = new int[N];
+        int[] left = new int[N], right = new int[N], stack = new int[N];
 
         int sz = 0;
         for (int i = 0; i < N; i++) {
-            while (sz > 0 && h[stack[sz - 1]] >= h[i]) {
-                sz--;
-            }
+            while (sz > 0 && h[stack[sz - 1]] >= h[i]) sz--;
             if (sz == 0) left[i] = -1;
             else left[i] = stack[sz - 1];
             stack[sz++] = i;
@@ -76,9 +74,7 @@ class Solution {
 
         sz = 0;
         for (int i = N - 1; i >= 0; i--) {
-            while (sz > 0 && h[stack[sz - 1]] >= h[i]) {
-                sz--;
-            }
+            while (sz > 0 && h[stack[sz - 1]] >= h[i]) sz--;
             if (sz == 0) right[i] = N;
             else right[i] = stack[sz - 1];
             stack[sz++] = i;

@@ -49,15 +49,13 @@ class Solution {
         int N = nums.length;
         LinkedList<Integer> q = new LinkedList<>();
         int[] res = new int[N - k + 1];
-
         for (int r = 0; r < N; r++) {
             int l = r - k + 1;
-            if (!q.isEmpty() && l > q.getFirst()) q.pollFirst();
-            while (!q.isEmpty() && nums[r] >= nums[q.getLast()]) q.pollLast();
+            if(!q.isEmpty() && q.getFirst() < l) q.pollFirst();
+            while (!q.isEmpty() && nums[q.getLast()] <= nums[r]) q.pollLast();
             q.offerLast(r);
             if (l >= 0) res[l] = nums[q.getFirst()];
         }
-
         return res;
     }
 }

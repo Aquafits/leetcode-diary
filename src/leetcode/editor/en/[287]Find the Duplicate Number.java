@@ -46,6 +46,10 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int findDuplicate(int[] nums) {
+        return binSearchSolution(nums);
+    }
+
+    public int graphSolution(int[] nums) {
         // pos 0 has out-degree but does not have in-degree, there is loop in [1, n]
         // the loop entrance got 2 in-degrees, we need to find it
         int p1 = 0, p2 = 0;
@@ -60,5 +64,25 @@ class Solution {
         }
         return p1;
     }
+
+    public int binSearchSolution(int[] nums) {
+        // dup number x;
+        // num < x: leCnt[num] <= x;
+        // num >= x: leCnt[num] >= x + 1;
+        int l = 1, r = nums.length - 1;
+        while (l < r) {
+            int mid = (l + r) >> 1;
+            if (leCnt(mid, nums) <= mid) l = mid + 1;
+            else r = mid;
+        }
+        return l;
+    }
+
+    private int leCnt(int x, int[] nums) {
+        int cnt = 0;
+        for (int i = 0; i < nums.length; i++) if (nums[i] <= x) cnt++;
+        return cnt;
+    }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -135,6 +135,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1499]Max Value of Equation.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[1499]Max Value of Equation.md" />
+              <option name="frontendQuestionId" value="leetcode.com1499" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[1499]Max Value of Equation.java" />
+              <option name="titleSlug" value="max-value-of-equation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1647]Minimum Deletions to Make Character Frequencies Unique.java">
           <value>
             <LeetcodeEditor>
@@ -399,6 +410,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[68]Text Justification.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[68]Text Justification.md" />
+              <option name="frontendQuestionId" value="leetcode.com68" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[68]Text Justification.java" />
+              <option name="titleSlug" value="text-justification" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[701]Insert into a Binary Search Tree.java">
           <value>
             <LeetcodeEditor>
@@ -429,6 +451,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[721]Accounts Merge.java" />
               <option name="titleSlug" value="accounts-merge" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[727]Minimum Window Subsequence.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[727]Minimum Window Subsequence.md" />
+              <option name="frontendQuestionId" value="leetcode.com727" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[727]Minimum Window Subsequence.java" />
+              <option name="titleSlug" value="minimum-window-subsequence" />
             </LeetcodeEditor>
           </value>
         </entry>
