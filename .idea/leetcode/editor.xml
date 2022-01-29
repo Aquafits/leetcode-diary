@@ -267,6 +267,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[297]Serialize and Deserialize Binary Tree.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[297]Serialize and Deserialize Binary Tree.md" />
+              <option name="frontendQuestionId" value="leetcode.com297" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[297]Serialize and Deserialize Binary Tree.java" />
+              <option name="titleSlug" value="serialize-and-deserialize-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[298]Binary Tree Longest Consecutive Sequence.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[298]Binary Tree Longest Consecutive Sequence.md" />
+              <option name="frontendQuestionId" value="leetcode.com298" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[298]Binary Tree Longest Consecutive Sequence.java" />
+              <option name="titleSlug" value="binary-tree-longest-consecutive-sequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[2]Add Two Numbers.java">
           <value>
             <LeetcodeEditor>
