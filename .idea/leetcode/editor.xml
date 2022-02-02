@@ -201,6 +201,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[202]Happy Number.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[202]Happy Number.md" />
+              <option name="frontendQuestionId" value="leetcode.com202" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[202]Happy Number.java" />
+              <option name="titleSlug" value="happy-number" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[207]Course Schedule.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[207]Course Schedule.md" />
+              <option name="frontendQuestionId" value="leetcode.com207" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[207]Course Schedule.java" />
+              <option name="titleSlug" value="course-schedule" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[234]Palindrome Linked List.java">
           <value>
             <LeetcodeEditor>
@@ -319,6 +341,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[323]Number of Connected Components in an Undirected Graph.java" />
               <option name="titleSlug" value="number-of-connected-components-in-an-undirected-graph" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[33]Search in Rotated Sorted Array.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[33]Search in Rotated Sorted Array.md" />
+              <option name="frontendQuestionId" value="leetcode.com33" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[33]Search in Rotated Sorted Array.java" />
+              <option name="titleSlug" value="search-in-rotated-sorted-array" />
             </LeetcodeEditor>
           </value>
         </entry>
