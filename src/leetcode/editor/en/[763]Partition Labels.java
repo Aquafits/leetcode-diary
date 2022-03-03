@@ -49,16 +49,16 @@ class Solution {
             right[cs[i] - 'a'] = i;
         }
 
+        int l = 0, r = 0;
         List<Integer> res = new ArrayList<>();
-        int l = 0;
-        while (l < N) {
-            int i = l, r = right[cs[i] - 'a'];
-            while (i < r) {
-                r = Math.max(r, right[cs[++i] - 'a']);
+        for(int i = 0; i < N; i ++){
+            if(i > r){
+                res.add(r - l + 1);
+                l = i;
             }
-            res.add(r - l + 1);
-            l = i + 1;
+            r = Math.max(r, right[cs[i] - 'a']);
         }
+        res.add(r - l + 1);
         return res;
     }
 }
