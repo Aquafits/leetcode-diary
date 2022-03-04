@@ -58,6 +58,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[116]Populating Next Right Pointers in Each Node.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[116]Populating Next Right Pointers in Each Node.md" />
+              <option name="frontendQuestionId" value="leetcode.com116" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[116]Populating Next Right Pointers in Each Node.java" />
+              <option name="titleSlug" value="populating-next-right-pointers-in-each-node" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1209]Remove All Adjacent Duplicates in String II.java">
           <value>
             <LeetcodeEditor>
@@ -223,6 +234,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1631]Path With Minimum Effort.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[1631]Path With Minimum Effort.md" />
+              <option name="frontendQuestionId" value="leetcode.com1631" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[1631]Path With Minimum Effort.java" />
+              <option name="titleSlug" value="path-with-minimum-effort" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1642]Furthest Building You Can Reach.java">
           <value>
             <LeetcodeEditor>
@@ -242,6 +264,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[1647]Minimum Deletions to Make Character Frequencies Unique.java" />
               <option name="titleSlug" value="minimum-deletions-to-make-character-frequencies-unique" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1648]Sell Diminishing-Valued Colored Balls.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[1648]Sell Diminishing-Valued Colored Balls.md" />
+              <option name="frontendQuestionId" value="leetcode.com1648" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[1648]Sell Diminishing-Valued Colored Balls.java" />
+              <option name="titleSlug" value="sell-diminishing-valued-colored-balls" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -608,6 +641,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[524]Longest Word in Dictionary through Deleting.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[524]Longest Word in Dictionary through Deleting.md" />
+              <option name="frontendQuestionId" value="leetcode.com524" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[524]Longest Word in Dictionary through Deleting.java" />
+              <option name="titleSlug" value="longest-word-in-dictionary-through-deleting" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[528]Random Pick with Weight.java">
           <value>
             <LeetcodeEditor>
@@ -803,6 +847,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[791]Custom Sort String.java" />
               <option name="titleSlug" value="custom-sort-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[799]Champagne Tower.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[799]Champagne Tower.md" />
+              <option name="frontendQuestionId" value="leetcode.com799" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[799]Champagne Tower.java" />
+              <option name="titleSlug" value="champagne-tower" />
             </LeetcodeEditor>
           </value>
         </entry>
