@@ -322,6 +322,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[18]4Sum.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[18]4Sum.md" />
+              <option name="frontendQuestionId" value="leetcode.com18" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[18]4Sum.java" />
+              <option name="titleSlug" value="4sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1]Two Sum.java">
           <value>
             <LeetcodeEditor>
@@ -363,6 +374,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[207]Course Schedule.java" />
               <option name="titleSlug" value="course-schedule" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[209]Minimum Size Subarray Sum.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[209]Minimum Size Subarray Sum.md" />
+              <option name="frontendQuestionId" value="leetcode.com209" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[209]Minimum Size Subarray Sum.java" />
+              <option name="titleSlug" value="minimum-size-subarray-sum" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -429,6 +451,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[239]Sliding Window Maximum.java" />
               <option name="titleSlug" value="sliding-window-maximum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[26]Remove Duplicates from Sorted Array.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[26]Remove Duplicates from Sorted Array.md" />
+              <option name="frontendQuestionId" value="leetcode.com26" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[26]Remove Duplicates from Sorted Array.java" />
+              <option name="titleSlug" value="remove-duplicates-from-sorted-array" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -509,6 +542,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[300]Longest Increasing Subsequence.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[300]Longest Increasing Subsequence.md" />
+              <option name="frontendQuestionId" value="leetcode.com300" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[300]Longest Increasing Subsequence.java" />
+              <option name="titleSlug" value="longest-increasing-subsequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[30]Substring with Concatenation of All Words.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[30]Substring with Concatenation of All Words.md" />
+              <option name="frontendQuestionId" value="leetcode.com30" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[30]Substring with Concatenation of All Words.java" />
+              <option name="titleSlug" value="substring-with-concatenation-of-all-words" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[315]Count of Smaller Numbers After Self.java">
           <value>
             <LeetcodeEditor>
@@ -550,6 +605,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[340]Longest Substring with At Most K Distinct Characters.java" />
               <option name="titleSlug" value="longest-substring-with-at-most-k-distinct-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[363]Max Sum of Rectangle No Larger Than K.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[363]Max Sum of Rectangle No Larger Than K.md" />
+              <option name="frontendQuestionId" value="leetcode.com363" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[363]Max Sum of Rectangle No Larger Than K.java" />
+              <option name="titleSlug" value="max-sum-of-rectangle-no-larger-than-k" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -858,6 +924,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[799]Champagne Tower.java" />
               <option name="titleSlug" value="champagne-tower" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[80]Remove Duplicates from Sorted Array II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[80]Remove Duplicates from Sorted Array II.md" />
+              <option name="frontendQuestionId" value="leetcode.com80" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[80]Remove Duplicates from Sorted Array II.java" />
+              <option name="titleSlug" value="remove-duplicates-from-sorted-array-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
