@@ -465,6 +465,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[259]3Sum Smaller.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[259]3Sum Smaller.md" />
+              <option name="frontendQuestionId" value="leetcode.com259" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[259]3Sum Smaller.java" />
+              <option name="titleSlug" value="3sum-smaller" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[26]Remove Duplicates from Sorted Array.java">
           <value>
             <LeetcodeEditor>
