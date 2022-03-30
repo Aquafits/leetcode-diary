@@ -24,46 +24,38 @@
 // Related Topics Array Math Two Pointers Sorting 👍 539 👎 157
 
 
+import java.util.Arrays;
+
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[] sortTransformedArray(int[] nums, int a, int b, int c) {
-        int N = nums.length;
-        int[] keys = new int[N];
-        for(int i = 0; i < N; i ++){
-            int x = nums[i];
-            keys[i] = a * x * x + b * x + c;
-        }
-
-        if(a >= 0){
-            return maxFirst(keys);
-        } else {
-            return minFirst(keys);
-        }
+        nums = Arrays.stream(nums).map(x -> a * x * x + b * x + c).toArray();
+        return a >= 0 ? maxFirst(nums) : minFirst(nums);
     }
 
-    private int[] minFirst(int[] keys) {
-        int[] res = new int[keys.length];
+    private int[] minFirst(int[] nums) {
+        int[] res = new int[nums.length];
         int p = 0;
-        int l = 0, r = keys.length - 1;
+        int l = 0, r = nums.length - 1;
         while(l <= r){
-            if(keys[l] <= keys[r]){
-                res[p ++] = keys[l ++];
+            if(nums[l] <= nums[r]){
+                res[p ++] = nums[l ++];
             } else {
-                res[p ++] = keys[r --];
+                res[p ++] = nums[r --];
             }
         }
         return res;
     }
 
-    private int[] maxFirst(int[] keys) {
-        int[] res = new int[keys.length];
-        int p = keys.length - 1;
-        int l = 0, r = keys.length - 1;
+    private int[] maxFirst(int[] nums) {
+        int[] res = new int[nums.length];
+        int p = nums.length - 1;
+        int l = 0, r = nums.length - 1;
         while(l <= r){
-            if(keys[l] >= keys[r]){
-                res[p --] = keys[l ++];
+            if(nums[l] >= nums[r]){
+                res[p --] = nums[l ++];
             } else {
-                res[p --] = keys[r --];
+                res[p --] = nums[r --];
             }
         }
         return res;

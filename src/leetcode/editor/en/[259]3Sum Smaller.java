@@ -48,14 +48,14 @@ class Solution {
 
         int cnt = 0;
         for(int i = 0; i < N - 2; i ++){
-            int target2 = target - nums[i];
-            for(int k = i + 2; k < N; k ++) {
-                int target3 = target2 - nums[k];
-                if(target3 < nums[i]) continue;
-                int j = find(nums, i + 1, k - 1, target3);
-                if(nums[j] < target3) cnt += j - i;
+            if(nums[i] + nums[i + 1] + nums[i + 2] >= target) break;
+            for(int j = i + 1; j < N - 1; j ++){
+                if(nums[i] + nums[j] + nums[j + 1] >= target) break;
+                int k = find(nums, j + 1, N - 1, target - nums[i] - nums[j]);
+                if(nums[k] < target - nums[i] - nums[j]){
+                    cnt += k - j;
+                }
             }
-
         }
         return cnt;
     }
@@ -63,10 +63,10 @@ class Solution {
     private int find(int[] arr, int l, int r, int t){
         while(l < r){
             int mid = l + r + 1 >> 1;
-            if(arr[mid] >= t){
-                r = mid - 1;
-            } else {
+            if(arr[mid] < t){
                 l = mid;
+            }else{
+                r = mid - 1;
             }
         }
         return l;

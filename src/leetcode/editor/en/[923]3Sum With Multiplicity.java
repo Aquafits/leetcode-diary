@@ -41,46 +41,39 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    private static final int MOD = 1000000007;
+    private static final int MOD = 1000_000_000 + 7;
 
     public int threeSumMulti(int[] arr, int target) {
-        long[] n2f = new long[101];
-        for(int n: arr) n2f[n] += 1;
+        long[] freq = new long[101];
+        for (int n : arr) freq[n]++;
 
         long res = 0;
-        for(int n1 = 0; n1 < 101; n1 ++){
-            if(n2f[n1] == 0) continue;
-            // pick first num
-            long x1 = n2f[n1];
-            n2f[n1] --;
+        for (int i = 0; i < 101 && i < 1 + target / 3; i++) {
+            if (freq[i] == 0) continue;
+            long f1 = freq[i];
+            freq[i]--;
 
-            for(int n2 = n1; n2 < 101; n2 ++){
-                if(n2f[n2] == 0) continue;
-                // pick second num;
-                long x2 = n2f[n2];
-                n2f[n2] --;
+            for (int j = i; j < 101 && j < 1 + (target - i) / 2; j++) {
+                if (freq[j] == 0) continue;
+                long f2 = freq[j];
+                freq[j]--;
 
-                // pick third num
-                int n3 = target - n1 - n2;
-                if(n3 >= n2 && n3 <= 100 && n2f[n3] > 0) {
-                    long x3 = n2f[n3];
-                    if(n1 == n2 && n2 == n3) {
-                        // System.out.printf("%d(%d), %d(%d), %d(%d): %d%n", n1, x1, n2, x2, n3, x3, x1 * x2 * x3 / 6);
-                        res += x1 * x2 * x3 / 6;
-                    } else if ((n1 < n2 && n2 == n3) || (n1 == n2 && n2 < n3)) {
-                        // System.out.printf("%d(%d), %d(%d), %d(%d): %d%n", n1, x1, n2, x2, n3, x3, x1 * x2 * x3 / 2);
-                        res += x1 * x2 * x3 / 2;
-                    } else if (n1 < n2 && n2 < n3) {
-                        // System.out.printf("%d(%d), %d(%d), %d(%d): %d%n", n1, x1, n2, x2, n3, x3, x1 * x2 * x3);
-                        res += x1 * x2 * x3;
+                int k = target - i - j;
+                if(k >= j && k <= 100 && freq[k] > 0) {
+                    long f3 = freq[k];
+                    if (i == j && j == k) {
+                        res += f1 * f2 * f3 / 6;
+                    } else if ((i == j && j < k) || (i < j && j == k)) {
+                        res += f1 * f2 * f3 / 2;
+                    } else if (i < j && j < k) {
+                        res += f1 * f2 * f3;
                     }
                     res %= MOD;
                 }
-                n2f[n2] ++;
+                freq[j]++;
             }
-            n2f[n1] ++;
+            freq[i]++;
         }
-
         return (int) res;
     }
 }

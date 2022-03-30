@@ -91,6 +91,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1234]Replace the Substring for Balanced String.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[1234]Replace the Substring for Balanced String.md" />
+              <option name="frontendQuestionId" value="leetcode.com1234" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[1234]Replace the Substring for Balanced String.java" />
+              <option name="titleSlug" value="replace-the-substring-for-balanced-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[1235]Maximum Profit in Job Scheduling.java">
           <value>
             <LeetcodeEditor>
