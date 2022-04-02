@@ -443,6 +443,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[2216]Minimum Deletions to Make Array Beautiful.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[2216]Minimum Deletions to Make Array Beautiful.md" />
+              <option name="frontendQuestionId" value="leetcode.com2216" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[2216]Minimum Deletions to Make Array Beautiful.java" />
+              <option name="titleSlug" value="minimum-deletions-to-make-array-beautiful" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[2217]Find Palindrome With Fixed Length.java">
           <value>
             <LeetcodeEditor>
@@ -781,6 +792,17 @@
               <option name="host" value="leetcode.com" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[528]Random Pick with Weight.java" />
               <option name="titleSlug" value="random-pick-with-weight" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/en/[529]Minesweeper.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/en/doc/content/[529]Minesweeper.md" />
+              <option name="frontendQuestionId" value="leetcode.com529" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/en/[529]Minesweeper.java" />
+              <option name="titleSlug" value="minesweeper" />
             </LeetcodeEditor>
           </value>
         </entry>
