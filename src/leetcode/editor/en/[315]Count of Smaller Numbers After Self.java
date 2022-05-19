@@ -46,27 +46,28 @@ import java.util.Collections;
 import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class TreeArray {
-    int[] tr;
-    int size;
 
-    TreeArray(int size) {
-        this.size = size;
-        this.tr = new int[size];
+class TreeArray{
+    int[] tr;
+    int sz;
+
+    public TreeArray(int sz) {
+        this.sz = sz;
+        this.tr = new int[sz + 1];
     }
 
-    int lowbit(int x) {
+    private int lowbit(int x) {
         return x & -x;
     }
 
-    int sums(int x) {
+    public int sums(int x){
         int sum = 0;
-        for (int i = x; i > 0; i -= lowbit(i)) sum += tr[i];
+        for(int i = x; i > 0; i -= lowbit(i)) sum += tr[i];
         return sum;
     }
 
-    void add(int x, int v) {
-        for (int i = x; i <= size; i += lowbit(i)) tr[i] += v;
+    public void add(int x, int v){
+        for(int i = x; i <= sz; i += lowbit(i)) tr[i] += v;
     }
 }
 
