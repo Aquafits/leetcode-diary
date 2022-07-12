@@ -65,7 +65,7 @@
 // 1 <= w[i] <= 10⁵ 
 // pickIndex will be called at most 10⁴ times. 
 // 
-// Related Topics Math Binary Search Prefix Sum Randomized 👍 449 👎 121
+// Related Topics Math Binary Search Prefix Sum Randomized 👍 451 👎 122
 
 
 import java.util.Random;
@@ -82,7 +82,6 @@ class Solution {
             sum[i++] = s;
         }
     }
-    
     public int pickIndex() {
         int num = new Random().nextInt(sum[sum.length - 1]) + 1;
         int l = 0, r = sum.length - 1;

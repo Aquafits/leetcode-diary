@@ -65,9 +65,14 @@ import java.util.Arrays;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
-        int l = weights[weights.length - 1], r = 0;
-        for (int w : weights) r += w;
-
+        // l = max(max(weights), sum(weights)/days);
+        // r = N * max(weights)/days
+        int sumW = 0, maxW = 0;
+        for(int w: weights) {
+            sumW += w;
+            maxW = Math.max(maxW, w);
+        }
+        int l = Math.max(maxW, sumW/days), r = sumW;
         while (l < r) {
             int mid = (l + r) >> 1;
             if (shippable(weights, mid, days)) {
@@ -80,17 +85,17 @@ class Solution {
     }
 
     private boolean shippable(int[] weights, int capacity, int days) {
-        int i = 0, cur = 0;
-        while (i < weights.length && days > 0) {
-            while (i < weights.length && cur + weights[i] <= capacity) {
-                cur += weights[i];
-                i++;
+        int curW = 0, usedDays = 0;
+        for(int w: weights){
+            if(curW + w > capacity) {
+                usedDays += 1;
+                curW = w;
+            } else {
+                curW += w;
             }
-            days--;
-            cur = 0;
+            if(usedDays > days) return false;
         }
-
-        return i == weights.length;
+        return 1 + usedDays <= days;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

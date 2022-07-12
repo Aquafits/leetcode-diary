@@ -42,40 +42,45 @@ import java.util.stream.Collectors;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int search(int[] nums, int target) {
-        int k = findPivot(nums);
-        int i1 = find(nums, 0, k - 1, target);
-        if (i1 != -1) return i1;
-        int i2 = find(nums, k, nums.length - 1, target);
-        if (i2 != -1) return i2;
-
-        return -1;
+        int p = findSmallest(nums);
+        int res = -1;
+        res = find(nums, 0, p - 1, target);
+        if (res != -1) return res;
+        res = find(nums, p, nums.length - 1, target);
+        return res;
     }
 
-    private int find(int[] nums, int l, int r, int t) {
-        if (l > r) return -1;
-        while (l < r) {
-            int mid = (l + r) >> 1;
-            if (nums[mid] >= t) {
-                r = mid;
-            } else {
-                l = mid + 1;
-            }
-        }
-        if (nums[l] == t) return l;
-        else return -1;
-    }
-
-    private int findPivot(int[] nums) {
+    private int findSmallest(int[] nums) {
         int l = 0, r = nums.length - 1;
         while (l < r) {
-            int mid = (l + r) >> 1;
-            if (nums[mid] < nums[r]) {
+            int mid = l + ((r - l) >> 1);
+            int x = nums[mid];
+            if (x <= nums[r]) {
                 r = mid;
             } else {
                 l = mid + 1;
             }
         }
+        // System.out.printf("l:%d%n", l);
         return l;
+    }
+
+    private int find(int[] nums, int l, int r, int target) {
+        // System.out.printf("l:%d, r:%d%n", l, r);
+        while (l < r) {
+            int mid = l + ((r - l) >> 1);
+            int x = nums[mid];
+            if (x >= target) {
+                r = mid;
+            } else {
+                l = mid + 1;
+            }
+        }
+        if (nums[l] == target) {
+            return l;
+        } else {
+            return -1;
+        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

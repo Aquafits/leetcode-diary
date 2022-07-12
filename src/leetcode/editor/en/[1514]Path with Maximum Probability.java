@@ -60,43 +60,42 @@ import java.util.*;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    class Node {
-        int id;
-        double possibility;
+    public double maxProbability(int n, int[][] edges, double[] edgeProb, int start, int end) {
+        HashMap<Integer, HashMap<Integer, Double>> adj = buildAdj(n, edges, edgeProb);
+        double[] p = new double[n];
+        p[start] = 1.0;
 
-        Node(int id, double possibility) {
-            this.id = id;
-            this.possibility = possibility;
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(start);
+        while(!q.isEmpty()){
+            int cur = q.poll();
+            if(!adj.containsKey(cur)) continue;
+            for(int next: adj.get(cur).keySet()){
+                double newP = p[cur] * adj.get(cur).get(next);
+                if(newP > p[next]){
+                    p[next] = newP;
+                    q.offer(next);
+                }
+            }
         }
+        return p[end];
     }
 
-    public double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {
-         List<List<Node>> lists = new ArrayList<>();
-         for (int i = 0; i < n; i++) {
-             lists.add(new ArrayList<>());
-         }
-         for (int i = 0; i < edges.length; i++) {
-             lists.get(edges[i][0]).add(new Node(edges[i][1], succProb[i]));
-             lists.get(edges[i][1]).add(new Node(edges[i][0], succProb[i]));
-         }
-         boolean[] visited = new boolean[n];
-         PriorityQueue<Node> queue = new PriorityQueue<>((a, b) -> b.possibility - a.possibility > 0 ? 1 : -1);
-         queue.offer(new Node(start, 1.0D));
-         visited[start] = true;
-         while (!queue.isEmpty()) {
-             Node cur = queue.poll();
-             visited[cur.id] = true;
-             if (cur.id == end) {
-                 return cur.possibility;
-             }
-             for (Node next : lists.get(cur.id)) {
-                 double possibility = cur.possibility * next.possibility;
-                 if (!visited[next.id]) {
-                     queue.offer(new Node(next.id, possibility));
-                 }
-             }
-         }
-         return 0;
+    private HashMap<Integer, HashMap<Integer, Double>> buildAdj(int n, int[][] edges, double[] edgeProb) {
+        HashMap<Integer, HashMap<Integer, Double>> adj = new HashMap<>(n);
+        for(int i = 0; i < edges.length; i ++){
+            int a = edges[i][0], b = edges[i][1];
+            double p = edgeProb[i];
+
+            HashMap<Integer, Double> adjOfA = adj.getOrDefault(a, new HashMap<>());
+            adjOfA.put(b, p);
+            adj.put(a, adjOfA);
+
+            HashMap<Integer, Double> adjOfB = adj.getOrDefault(b, new HashMap<>());
+            adjOfB.put(a, p);
+            adj.put(b, adjOfB);
+        }
+        return adj;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
