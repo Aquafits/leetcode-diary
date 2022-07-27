@@ -1,5 +1,7 @@
 import leetcode.utils.TreeNode;
 
+import java.util.Stack;
+
 //You are given an integer array nums with no duplicates. A maximum binary tree
 //can be built recursively from nums using the following algorithm: 
 //
@@ -71,7 +73,8 @@ import leetcode.utils.TreeNode;
  */
 class Solution {
     public TreeNode constructMaximumBinaryTree(int[] nums) {
-        return getMax(nums, 0, nums.length - 1);
+//        return getMax(nums, 0, nums.length - 1);
+        return constructByStack(nums);
     }
 
     private TreeNode getMax(int[] nums, int l, int r) {
@@ -90,6 +93,26 @@ class Solution {
         node.left = getMax(nums, l, maxId - 1);
         node.right = getMax(nums, maxId + 1, r);
         return node;
+    }
+
+    private TreeNode constructByStack(int[] nums) {
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode root = new TreeNode(1000 + 10);
+        stack.push(root);
+
+        for(int n: nums) {
+            TreeNode pop = null;
+            TreeNode cur = new TreeNode(n);
+            while(!stack.isEmpty() && n > stack.peek().val) {
+                pop = stack.pop();
+            }
+
+            stack.peek().right = cur;
+            stack.push(cur);
+            cur.left = pop;
+        }
+
+        return root.right;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -61,40 +61,40 @@ import java.util.Stack;
 //leetcode submit region begin(Prohibit modification and deletion)
 class MyQueue {
 
-    Stack<Integer> spush = new Stack<>(), spop = new Stack<>();
-    int sz = 0, top = -1;
+    Stack<Integer> rear = new Stack<>(), front = new Stack<>();
 
     public MyQueue() {
 
     }
     
     public void push(int x) {
-        if(sz == 0){
-            top = x;
-        }
-        spush.push(x);
+        rear.push(x);
     }
     
     public int pop() {
-        if(spop.isEmpty()){
-            int n = spush.size();
-            while (n > 0){
-                spop.push(spush.pop());
+        if(front.isEmpty()){
+            int n = rear.size();
+            while (n > 0) {
+                front.push(rear.pop());
                 n --;
             }
         }
-        int res = spop.pop();
-        sz --;
-        if(sz > 0) top =
-        return res;
+        return front.pop();
     }
     
     public int peek() {
-        return top;
+        if(front.isEmpty()){
+            int n = rear.size();
+            while (n > 0) {
+                front.push(rear.pop());
+                n --;
+            }
+        }
+        return front.peek();
     }
     
     public boolean empty() {
-        return top == -1;
+        return rear.isEmpty() && front.isEmpty();
     }
 }
 
