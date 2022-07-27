@@ -55,31 +55,24 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int findPairs(int[] nums, int k) {
-        Arrays.sort(nums);
+        Map<Integer, Integer> counter = new HashMap<>();
+        for(int n: nums) {
+            counter.put(n, counter.getOrDefault(n, 0) + 1);
+        }
+
         int res = 0;
-        int l = 0, r = 1;
-        while(r < nums.length){
-            int d = nums[r] - nums[l];
-            if(d >= k){
-                if(d == k) res ++;
-                l = move(nums, l);
-                r = Math.max(l + 1, r);
-            } else {
-                r = move(nums, r);
+        for(Integer a: counter.keySet()) {
+            int b = a + k;
+            if(counter.containsKey(b)) {
+                if(b != a) {
+                    res += 1;
+                } else if(counter.get(b) >= 2) {
+                    res += 1;
+                }
             }
         }
+
         return res;
     }
-
-
-    private int move(int[] nums, int p){
-        int base = nums[p];
-        while(p < nums.length){
-            if(nums[p] != base) break;
-            p ++;
-        }
-        return p;
-    }
-
 }
 //leetcode submit region end(Prohibit modification and deletion)

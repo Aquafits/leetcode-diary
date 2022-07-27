@@ -82,7 +82,6 @@ class Solution {
             sum[i++] = s;
         }
     }
-
     public int pickIndex() {
         int num = new Random().nextInt(sum[sum.length - 1]) + 1;
         int l = 0, r = sum.length - 1;
